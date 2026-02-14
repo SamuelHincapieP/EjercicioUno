@@ -183,20 +183,15 @@ public class SellingSystem {
         System.out.println("Ingrese el id de la venta");
         saleId = sc.nextInt();
         sc.nextLine();
-
-        System.out.println("Ingrese la fecha de la venta (dd/mm/aaaa)");
+        System.out.println("Ingrese la fecha de la venta");
         date = sc.nextLine();
-
-        System.out.println("Ingrese el tipo de venta (Contado / Credito)");
+        System.out.println("Ingrese el tipo de venta (contado o credito)");
         type = sc.nextLine();
-
         System.out.println("Ingrese el id del producto");
         productId = sc.nextInt();
-
         System.out.println("Ingrese el documento del cliente");
         customerDocument = sc.nextInt();
-
-        System.out.println("Ingrese la cantidad a vender");
+        System.out.println("Ingrese la cantidad vendida");
         quantitySold = sc.nextInt();
 
         if (productId == id && customerDocument == document) {
@@ -204,7 +199,7 @@ public class SellingSystem {
             if (quantitySold <= quantity) {
 
                 total = quantitySold * price;
-                quantity -= quantitySold;
+                quantity = quantity - quantitySold;
 
                 System.out.println("Venta realizada correctamente");
                 System.out.println("Total a pagar: " + total);
